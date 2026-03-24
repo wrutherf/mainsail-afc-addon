@@ -1,0 +1,15 @@
+diff --git a/src/store/index.ts b/src/store/index.ts
+--- a/src/store/index.ts
++++ b/src/store/index.ts
+@@ -1,5 +1,6 @@
+ import { createPinia } from 'pinia';
+ import { usePrinterStore } from './printer';
++import { useAFCStore } from './afc';
+
+ const pinia = createPinia();
+
+ export {
+   pinia,
+   usePrinterStore,
++  useAFCStore,
+ };
