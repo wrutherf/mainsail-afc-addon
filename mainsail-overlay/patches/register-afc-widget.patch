@@ -1,0 +1,11 @@
+diff --git a/src/components/widgets/index.ts b/src/components/widgets/index.ts
+--- a/src/components/widgets/index.ts
++++ b/src/components/widgets/index.ts
+@@ -1,5 +1,6 @@
+ import TemperatureWidget from './TemperatureWidget.vue';
++import AFCWidget from './AFCWidget.vue';
+
+ export default {
+   TemperatureWidget,
++  AFCWidget,
+ };
