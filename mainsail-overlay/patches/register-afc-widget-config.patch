@@ -1,0 +1,16 @@
+diff --git a/src/config/widgets.ts b/src/config/widgets.ts
+--- a/src/config/widgets.ts
++++ b/src/config/widgets.ts
+@@ -10,6 +10,13 @@ export const widgets = [
+     icon: 'mdi-thermometer',
+     description: 'Temperature control and monitoring',
+   },
++  {
++    name: 'AFC',
++    component: 'AFCWidget',
++    icon: 'mdi-turtle',
++    description: 'AFC / AMS style filament changer',
++    minWidth: 4,
++    minHeight: 3,
++  },
+ ];
