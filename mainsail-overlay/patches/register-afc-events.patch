@@ -1,0 +1,19 @@
+diff --git a/src/plugins/moonraker/index.ts b/src/plugins/moonraker/index.ts
+--- a/src/plugins/moonraker/index.ts
++++ b/src/plugins/moonraker/index.ts
+@@ -1,5 +1,6 @@
+ import { usePrinterStore } from '@/store';
++import { useAFCStore } from '@/store';
+
+ export function registerMoonrakerEvents(moonraker: any) {
+   const printer = usePrinterStore();
++  const afc = useAFCStore();
+
+   moonraker.on('notify_printer_state_changed', (payload: any) => {
+     printer.updateState(payload);
+   });
++
++  moonraker.on('notify_afc_status_changed', (payload: any) => {
++    afc.$patch(payload);
++  });
+ }
